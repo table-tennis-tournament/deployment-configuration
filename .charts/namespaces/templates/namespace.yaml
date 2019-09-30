@@ -1,0 +1,17 @@
+{{- range .Values.applications -}}
+{{- if not .noNamespaceCreation -}}
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    openshift.io/description: {{ default "" .description | quote }}
+    openshift.io/display-name: {{ default "" .displayName | quote }}
+    openshift.io/requester: {{ default "" $.Values.requestor | quote }}
+{{- if not (kindIs "invalid" .idRange) }}   
+    openshift.io/sa.scc.supplemental-groups: {{ .idRange }}
+    openshift.io/sa.scc.uid-range:  {{ .idRange }}
+{{ end }}
+  name: {{ default .name .namespace | quote }}
+{{ end }}
+{{- end -}}
