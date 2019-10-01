@@ -1,0 +1,48 @@
+app:
+  frontend:
+    replicaCount: 1
+    appPort: 8080
+    image:
+      repository: bitnami/nginx # change me
+      tag: latest # change me
+      pullPolicy: IfNotPresent
+    service:
+      type: ClusterIP
+      port: 80
+    route:
+      enabled: true
+      path: /
+    resources: {}
+      # limits:
+      #  cpu: 100m
+      #  memory: 128Mi
+      # requests:
+      #  cpu: 100m
+      #  memory: 128Mi
+    nodeSelector: {}
+    tolerations: []
+    affinity: {}
+
+  backend:
+    replicaCount: 1
+    appPort: 8080
+    image:
+      repository: bitnami/tomcat # change me
+      tag: latest # change me
+      pullPolicy: IfNotPresent
+    service:
+      type: ClusterIP
+      port: 80
+    route:
+      enabled: true
+      path: /api    
+    resources: {}
+      # limits:
+      #  cpu: 100m
+      #  memory: 128Mi
+      # requests:
+      #  cpu: 100m
+      #  memory: 128Mi
+    nodeSelector: {}
+    tolerations: []
+    affinity: {}
