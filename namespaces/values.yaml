@@ -1,0 +1,11 @@
+namespaces:
+  users:
+    - niiku
+    - christiansiegel
+    - joachimprinzbach
+    - leubedane
+  applications:
+    - name: test
+      syncPolicy:
+        automated:
+            prune: true
