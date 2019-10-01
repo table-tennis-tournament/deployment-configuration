@@ -9,7 +9,7 @@ namespaces:
       syncPolicy:
         automated:
             prune: true
-    - name: example-app     
+    - name: app-template     
       helm:
         valueFiles:
           - "values.yaml"
