@@ -3,8 +3,8 @@ app:
     replicaCount: 1
     appPort: 8080
     image:
-      repository: bitnami/nginx
-      tag: latest
+      repository: bitnami/nginx # change me
+      tag: latest # change me
       pullPolicy: IfNotPresent
     service:
       type: ClusterIP
@@ -27,8 +27,8 @@ app:
     replicaCount: 1
     appPort: 8080
     image:
-      repository: bitnami/tomcat
-      tag: latest
+      repository: bitnami/tomcat # change me
+      tag: latest # change me
       pullPolicy: IfNotPresent
     service:
       type: ClusterIP
