@@ -3,6 +3,9 @@ project: table-tennis-tournament
 repoURL: https://github.com/table-tennis-tournament/deployment-configuration.git
 users:
   - niiku
+  - christiansiegel
+  - joachimprinzbach
+  - leubedane
 applications:
   - name: test
     syncPolicy:
