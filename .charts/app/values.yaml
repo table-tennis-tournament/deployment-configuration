@@ -1,0 +1,51 @@
+route:
+  enabled: true
+  host: ""
+  defaultDomain: apps.wheel.sh
+
+
+frontend:
+  replicaCount: 1
+  appPort: 8080
+  image:
+    repository: table-tennis-tournament/match-management-client
+    tag: latest
+    pullPolicy: IfNotPresent
+  service:
+    type: ClusterIP
+    port: 80
+  route:
+    path: /
+  resources: {}
+    # limits:
+    #  cpu: 100m
+    #  memory: 128Mi
+    # requests:
+    #  cpu: 100m
+    #  memory: 128Mi
+  nodeSelector: {}
+  tolerations: []
+  affinity: {}
+
+backend:
+  replicaCount: 1
+  appPort: 8080
+  image:
+    repository: table-tennis-tournament/match-management-server
+    tag: latest
+    pullPolicy: IfNotPresent
+  service:
+    type: ClusterIP
+    port: 80
+  route:
+    path: /api    
+  resources: {}
+    # limits:
+    #  cpu: 100m
+    #  memory: 128Mi
+    # requests:
+    #  cpu: 100m
+    #  memory: 128Mi
+  nodeSelector: {}
+  tolerations: []
+  affinity: {}

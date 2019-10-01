@@ -1,0 +1,29 @@
+{{- if .Values.route.enabled -}}
+{{- $fullName := include "app.fullname" . -}}
+{{- $defaultUrl := printf "%s.%s" $fullName $.Values.route.defaultDomain -}}
+{{- $routePath := .Values.frontend.route.path -}}
+{{- $host := .Values.route.host -}}
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  labels:
+    app: {{ template "app.name" . }}-frontend
+    chart: {{ template "app.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+  name: {{ $fullName }}-frontend
+spec:
+  host: {{ default $defaultUrl $host }}
+  path: {{ $routePath }}
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: {{ template "app.fullname" . }}-frontend
+    weight: 100
+  wildcardPolicy: None
+status:
+  ingress:
+    - routerName: router
+{{- end }}
