@@ -26,11 +26,11 @@ app:
   backend:
     replicaCount: 1
     appPort: 8080
-    livenessProbePath: api/hello
-    readinessProbePath: api/hello
+    livenessProbePath: api/actuator/health
+    readinessProbePath: api/actuator/health
     image:
       repository: tabletennistournament/match-management-server
-      tag: master-4947f96
+      tag: master-c2fe0e3
       pullPolicy: IfNotPresent
     service:
       type: ClusterIP
