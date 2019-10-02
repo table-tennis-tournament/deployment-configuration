@@ -28,11 +28,11 @@ spec:
               protocol: TCP
           livenessProbe:
             httpGet:
-              path: /
+              path: /api
               port: {{ .Values.backend.appPort }}
           readinessProbe:
             httpGet:
-              path: /
+              path: /api
               port: {{ .Values.backend.appPort }}
           resources:
 {{ toYaml .Values.backend.resources | indent 12 }}
