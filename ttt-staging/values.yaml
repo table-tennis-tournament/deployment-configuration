@@ -26,6 +26,8 @@ app:
   backend:
     replicaCount: 1
     appPort: 8080
+    livenessProbePath: api/hello
+    readinessProbePath: api/hello
     image:
       repository: tabletennistournament/match-management-server
       tag: master-4947f96
