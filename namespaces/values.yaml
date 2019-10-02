@@ -16,3 +16,10 @@ namespaces:
       syncPolicy:
         automated:
           prune: true
+    - name: ttt-staging
+      helm:
+        valueFiles:
+          - "values.yaml"
+      syncPolicy:
+        automated:
+          prune: true
