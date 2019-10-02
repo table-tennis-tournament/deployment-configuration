@@ -1,6 +1,6 @@
 {{- if .Values.route.enabled -}}
 {{- $fullName := include "app.fullname" . -}}
-{{- $defaultUrl := printf "%s.%s" $fullName $.Values.route.defaultDomain -}}
+{{- $defaultUrl := printf "%s.%s" .Release.Name $.Values.route.defaultDomain -}}
 {{- $routePath := .Values.frontend.route.path -}}
 {{- $host := .Values.route.host -}}
 apiVersion: route.openshift.io/v1
