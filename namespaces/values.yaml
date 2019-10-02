@@ -4,6 +4,7 @@ namespaces:
     - christiansiegel
     - joachimprinzbach
     - leubedane
+    - dane@nikio.io
   applications:
     - name: test
       syncPolicy:
