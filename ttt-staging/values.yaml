@@ -28,14 +28,14 @@ app:
     appPort: 8080
     image:
       repository: tabletennistournament/match-management-server
-      tag: master-39e195e
+      tag: master-4947f96
       pullPolicy: IfNotPresent
     service:
       type: ClusterIP
       port: 80
     route:
       enabled: true
-      path: /api    
+      path: /api
     resources: {}
       # limits:
       #  cpu: 100m
