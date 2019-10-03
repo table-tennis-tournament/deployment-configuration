@@ -1,18 +1,18 @@
-{{- range .Values.applications -}}
-{{- $namespace := .name -}}
+{{- range $key, $value := .Values.applications -}}
+{{- $namespace := $key -}}
 {{- if not (kindIs "invalid" .namespace) -}}
 {{- $namespace = .namespace }}
 {{- end -}}
-{{- if or ((kindIs "invalid" .enabled)) .enabled -}}
+{{- if or ((kindIs "invalid" $value.enabled)) $value.enabled -}}
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: {{ .name }}
+  name: {{ $key }}
   namespace: argocd
 spec:
   destination:
-    namespace: {{ default .name .namespace }}
+    namespace: {{ default $key $value.namespace }}
     server: {{ $.Values.server }}
   project: {{ $.Values.project }}
   {{- if .ignoreDifferences }}
@@ -20,20 +20,20 @@ spec:
   {{- toYaml .ignoreDifferences | nindent 4 }}
   {{ end }}
   source:
-{{- if .helm }}
+{{- if $value.helm }}
     helm:
-{{- toYaml .helm | nindent 6 -}}
+{{- toYaml $value.helm | nindent 6 -}}
 {{- end -}}
-{{- if .kustomize }}
+{{- if $value.kustomize }}
     kustomize:
-  {{- toYaml .kustomize | nindent 6 -}}
+  {{- toYaml $value.kustomize | nindent 6 -}}
 {{- end }}
     path: {{ $namespace }}
     repoURL: {{ $.Values.repoURL }}
-    targetRevision: {{ default "HEAD" .targetRevision }}
-  {{- if .syncPolicy }}
+    targetRevision: {{ default "HEAD" $value.targetRevision }}
+  {{- if $value.syncPolicy }}
   syncPolicy:
-  {{- toYaml .syncPolicy | nindent 4 }}
+  {{- toYaml $value.syncPolicy | nindent 4 }}
 {{- end }}
 {{ end }}
 {{- end }}
