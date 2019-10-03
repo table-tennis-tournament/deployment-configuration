@@ -17,13 +17,6 @@ namespaces:
       syncPolicy:
         automated:
           prune: true
-    ttt-staging-master:
-      helm:
-        valueFiles:
-        - values.yaml
-      syncPolicy:
-        automated:
-          prune: true
     ttt-staging-feat-pr-test:
       helm:
         valueFiles:
