@@ -1,19 +1,26 @@
 namespaces:
   users:
-    - niiku
-    - christiansiegel
-    - joachimprinzbach
-    - leubedane
-    - dane@nikio.io
+  - niiku
+  - christiansiegel
+  - joachimprinzbach
+  - leubedane
+  - dane@nikio.io
   applications:
     test:
       syncPolicy:
         automated:
-            prune: true
+          prune: true
     ttt-staging:
       helm:
         valueFiles:
-          - "values.yaml"
+        - values.yaml
+      syncPolicy:
+        automated:
+          prune: true
+    ttt-staging-master:
+      helm:
+        valueFiles:
+        - values.yaml
       syncPolicy:
         automated:
           prune: true
