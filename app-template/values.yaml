@@ -5,7 +5,7 @@ app:
     image:
       repository: tabletennistournament/match-management-client
       tag: master
-      pullPolicy: IfNotPresent
+      pullPolicy: Always
     service:
       type: ClusterIP
       port: 80
@@ -31,7 +31,7 @@ app:
     image:
       repository: tabletennistournament/match-management-server
       tag: master
-      pullPolicy: IfNotPresent
+      pullPolicy: Always
     service:
       type: ClusterIP
       port: 80
