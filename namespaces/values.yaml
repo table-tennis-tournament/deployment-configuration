@@ -6,10 +6,6 @@ namespaces:
   - leubedane
   - dane@nikio.io
   applications:
-    test:
-      syncPolicy:
-        automated:
-          prune: true
     ttt-staging:
       helm:
         valueFiles:
