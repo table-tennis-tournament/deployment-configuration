@@ -10,13 +10,6 @@ namespaces:
       syncPolicy:
         automated:
             prune: true
-    app-template:     
-      helm:
-        valueFiles:
-          - "values.yaml"
-      syncPolicy:
-        automated:
-          prune: true
     ttt-staging:
       helm:
         valueFiles:
