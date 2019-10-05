@@ -76,3 +76,10 @@ namespaces:
       syncPolicy:
         automated:
           prune: true
+    ttt-staging-dummy-branch-:
+      helm:
+        valueFiles:
+        - values.yaml
+      syncPolicy:
+        automated:
+          prune: true
