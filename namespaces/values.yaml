@@ -41,3 +41,10 @@ namespaces:
       syncPolicy:
         automated:
           prune: true
+    ttt-staging-feat-notifygithub:
+      helm:
+        valueFiles:
+        - values.yaml
+      syncPolicy:
+        automated:
+          prune: true
