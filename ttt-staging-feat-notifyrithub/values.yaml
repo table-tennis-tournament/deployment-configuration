@@ -23,7 +23,7 @@ app:
     readinessProbePath: api/hello
     image:
       repository: tabletennistournament/match-management-server
-      tag: feat-notifyGithub-0018c0e
+      tag: feat-notifyGithub-862d566
       pullPolicy: Always
     service:
       type: ClusterIP
