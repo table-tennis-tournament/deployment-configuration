@@ -48,3 +48,10 @@ namespaces:
       syncPolicy:
         automated:
           prune: true
+    ttt-staging-feat-usenewdeployment:
+      helm:
+        valueFiles:
+        - values.yaml
+      syncPolicy:
+        automated:
+          prune: true
