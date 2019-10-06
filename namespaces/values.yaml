@@ -83,3 +83,10 @@ namespaces:
       syncPolicy:
         automated:
           prune: true
+    ttt-staging-fix-travis-tag:
+      helm:
+        valueFiles:
+        - values.yaml
+      syncPolicy:
+        automated:
+          prune: true
