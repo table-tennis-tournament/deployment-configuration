@@ -23,7 +23,7 @@ app:
     readinessProbePath: api/hello
     image:
       repository: tabletennistournament/match-management-server
-      tag: dummy-branch-0f233d3
+      tag: dummy-branch-1922693
       pullPolicy: Always
     service:
       type: ClusterIP
