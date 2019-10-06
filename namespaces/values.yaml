@@ -27,3 +27,10 @@ namespaces:
       syncPolicy:
         automated:
           prune: true
+    ttt-staging-test-branch-3:
+      helm:
+        valueFiles:
+        - values.yaml
+      syncPolicy:
+        automated:
+          prune: true
