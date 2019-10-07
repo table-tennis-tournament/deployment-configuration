@@ -23,7 +23,7 @@ app:
     readinessProbePath: api/actuator/health
     image:
       repository: tabletennistournament/match-management-server
-      tag: feat-slack_git_ops-ea6a389
+      tag: feat-slack_git_ops-9393ecc
       pullPolicy: Always
     service:
       type: ClusterIP
