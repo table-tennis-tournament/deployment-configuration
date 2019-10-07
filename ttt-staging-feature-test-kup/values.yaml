@@ -23,7 +23,7 @@ app:
     readinessProbePath: api/hello
     image:
       repository: tabletennistournament/match-management-server
-      tag: master
+      tag: feature-test-kup-bbd9acb
       pullPolicy: Always
     service:
       type: ClusterIP
