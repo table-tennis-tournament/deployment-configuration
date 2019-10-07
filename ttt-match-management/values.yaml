@@ -23,7 +23,7 @@ app:
     readinessProbePath: api/actuator/health
     image:
       repository: tabletennistournament/match-management-server
-      tag: master-34b6e02
+      tag: master-a61eec7
       pullPolicy: Always
     service:
       type: ClusterIP
