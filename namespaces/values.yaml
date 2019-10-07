@@ -31,3 +31,10 @@ namespaces:
       syncPolicy:
         automated:
           prune: true
+    ttt-staging-fix-dev-proxy-port:
+      helm:
+        valueFiles:
+        - values.yaml
+      syncPolicy:
+        automated:
+          prune: true

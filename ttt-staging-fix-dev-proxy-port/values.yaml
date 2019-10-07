@@ -4,7 +4,7 @@ app:
     appPort: 8080
     image:
       repository: tabletennistournament/match-management-client
-      tag: feature-test-kup-a72a7a6
+      tag: fix-dev-proxy-port-8576033
       pullPolicy: Always
     service:
       type: ClusterIP
@@ -23,7 +23,7 @@ app:
     readinessProbePath: api/hello
     image:
       repository: tabletennistournament/match-management-server
-      tag: feature-test-kup-bbd9acb
+      tag: master
       pullPolicy: Always
     service:
       type: ClusterIP
