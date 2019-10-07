@@ -48,3 +48,30 @@ app:
     nodeSelector: {}
     tolerations: []
     affinity: {}
+
+  postgresql:
+    enabled: true
+    databaseName: app
+    user: postgresql
+    password: postgresql
+    image:
+      repository: centos/postgresql-96-centos7
+      tag: latest
+      pullPolicy: IfNotPresent
+    service:
+      type: ClusterIP
+      port: 5432
+    persistence:
+      enabled: true
+      stroageClass: rook-ceph-block
+      size: 1Gi
+    resources: {}
+      # limits:
+      #  cpu: 100m
+      #  memory: 128Mi
+      # requests:
+    #  cpu: 100m
+    #  memory: 128Mi
+    nodeSelector: {}
+    tolerations: []
+    affinity: {}

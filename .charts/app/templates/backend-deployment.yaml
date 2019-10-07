@@ -7,6 +7,8 @@ metadata:
     chart: {{ template "app.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
+  annotations:
+    checksum/config: {{ include (print $.Template.BasePath "/postgresql-secret.yaml") . | sha256sum }}
 spec:
   replicas: {{ .Values.backend.replicaCount }}
   selector:
@@ -23,6 +25,29 @@ spec:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.backend.image.repository }}:{{ .Values.backend.image.tag }}"
           imagePullPolicy: {{ .Values.backend.image.pullPolicy }}
+  {{- if .Values.postgresql.enabled }}
+          env:
+            - name: POSTGRESQL_USER
+              valueFrom:
+                secretKeyRef:
+                  key: database-user
+                  name: {{ template "app.name" . }}-postgresql
+            - name: POSTGRESQL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: database-password
+                  name: {{ template "app.name" . }}-postgresql
+            - name: POSTGRESQL_DATABASE
+              valueFrom:
+                secretKeyRef:
+                  key: database-name
+                  name: {{ template "app.name" . }}-postgresql
+            - name: POSTGRESQL_HOST
+              valueFrom:
+                secretKeyRef:
+                  key: database-host
+                  name: {{ template "app.name" . }}-postgresql
+{{- end }}
           ports:
             - containerPort: {{ .Values.backend.appPort }}
               protocol: TCP

@@ -3,12 +3,38 @@ route:
   host: ""
   defaultDomain: apps.wheel.sh
 
+postgresql:
+  enabled: true
+  databaseName: app
+  user: postgresql
+  password: postgresql
+  image:
+    repository: centos/postgresql-96-centos7
+    tag: latest
+    pullPolicy: IfNotPresent
+  service:
+    type: ClusterIP
+    port: 5432
+  persistence:
+    enabled: true
+    stroageClass: rook-ceph-block
+    size: 1Gi
+  resources: {}
+    # limits:
+    #  cpu: 100m
+    #  memory: 128Mi
+    # requests:
+    #  cpu: 100m
+  #  memory: 128Mi
+  nodeSelector: {}
+  tolerations: []
+  affinity: {}
 
 frontend:
   replicaCount: 1
   appPort: 8080
   image:
-    repository: table-tennis-tournament/match-management-client
+    repository: tabletennistournament/match-management-client
     tag: latest
     pullPolicy: IfNotPresent
   service:
@@ -31,14 +57,16 @@ backend:
   replicaCount: 1
   appPort: 8080
   image:
-    repository: table-tennis-tournament/match-management-server
+    repository: tabletennistournament/match-management-server
     tag: latest
     pullPolicy: IfNotPresent
   service:
     type: ClusterIP
     port: 80
   route:
-    path: /api    
+    path: /api
+  livenessProbePath: api/hello
+  readinessProbePath: api/hello
   resources: {}
     # limits:
     #  cpu: 100m
