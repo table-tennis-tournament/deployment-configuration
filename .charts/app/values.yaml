@@ -17,7 +17,7 @@ postgresql:
     port: 5432
   persistence:
     enabled: true
-    stroageClass: rook-ceph-block
+    storageClass: rook-ceph-block
     size: 1Gi
   resources: {}
     # limits:
