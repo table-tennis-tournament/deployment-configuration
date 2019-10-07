@@ -6,6 +6,9 @@ namespaces:
   - leubedane
   - dane@nikio.io
   - kullmanp
+  - luechtdiode
+  - lennartx
+  - arburk
   applications:
     ttt-staging:
       helm:
