@@ -5,6 +5,7 @@ namespaces:
   - joachimprinzbach
   - leubedane
   - dane@nikio.io
+  - kullmanp
   applications:
     ttt-staging:
       helm:
