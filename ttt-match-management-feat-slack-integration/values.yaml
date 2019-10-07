@@ -4,7 +4,7 @@ app:
     appPort: 8080
     image:
       repository: tabletennistournament/match-management-client
-      tag: feat-slack_integration-cd6b7a0
+      tag: feat-slack_integration-04beec5
       pullPolicy: Always
     service:
       type: ClusterIP
