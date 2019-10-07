@@ -10,20 +10,6 @@ namespaces:
   - lennartx
   - arburk
   applications:
-    ttt-match-management-feat-adjust_app_name:
-      helm:
-        valueFiles:
-        - values.yaml
-      syncPolicy:
-        automated:
-          prune: true
-    ttt-match-management-feat-adjust-app-name:
-      helm:
-        valueFiles:
-        - values.yaml
-      syncPolicy:
-        automated:
-          prune: true
     ttt-match-management:
       helm:
         valueFiles:
