@@ -38,3 +38,10 @@ namespaces:
       syncPolicy:
         automated:
           prune: true
+    ttt-match-management-feat-adjust_app_name:
+      helm:
+        valueFiles:
+        - values.yaml
+      syncPolicy:
+        automated:
+          prune: true
