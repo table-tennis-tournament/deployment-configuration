@@ -101,3 +101,10 @@ namespaces:
       syncPolicy:
         automated:
           prune: true
+    ttt-match-management-bugfix-optional-table-manager-id:
+      helm:
+        valueFiles:
+        - values.yaml
+      syncPolicy:
+        automated:
+          prune: true
