@@ -73,3 +73,10 @@ namespaces:
       syncPolicy:
         automated:
           prune: true
+    ttt-match-management-domain-model:
+      helm:
+        valueFiles:
+        - values.yaml
+      syncPolicy:
+        automated:
+          prune: true
