@@ -4,7 +4,7 @@ app:
     appPort: 8080
     image:
       repository: tabletennistournament/match-management-client
-      tag: fix-player-dto-property-typo-eccfb0b
+      tag: fix-player-dto-property-typo-827853c
       pullPolicy: Always
     service:
       type: ClusterIP
