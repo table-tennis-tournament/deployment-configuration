@@ -59,3 +59,10 @@ namespaces:
       syncPolicy:
         automated:
           prune: true
+    ttt-match-management-remove-snake-case:
+      helm:
+        valueFiles:
+        - values.yaml
+      syncPolicy:
+        automated:
+          prune: true
