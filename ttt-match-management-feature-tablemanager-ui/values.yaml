@@ -4,7 +4,7 @@ app:
     appPort: 8080
     image:
       repository: tabletennistournament/match-management-client
-      tag: feature-tablemanager-ui-413f481
+      tag: feature-tablemanager-ui-04f4376
       pullPolicy: Always
     service:
       type: ClusterIP
