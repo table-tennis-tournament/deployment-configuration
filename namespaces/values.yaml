@@ -66,3 +66,10 @@ namespaces:
       syncPolicy:
         automated:
           prune: true
+    ttt-match-management-feature-websockets:
+      helm:
+        valueFiles:
+        - values.yaml
+      syncPolicy:
+        automated:
+          prune: true
