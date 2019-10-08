@@ -108,3 +108,10 @@ namespaces:
       syncPolicy:
         automated:
           prune: true
+    ttt-match-management-fix-property-typo:
+      helm:
+        valueFiles:
+        - values.yaml
+      syncPolicy:
+        automated:
+          prune: true
