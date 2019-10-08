@@ -23,7 +23,7 @@ app:
     readinessProbePath: api/actuator/health
     image:
       repository: tabletennistournament/match-management-server
-      tag: bugfix-optional-table-manager-id-e0043b9
+      tag: bugfix-optional-table-manager-id-433cf45
       pullPolicy: Always
     service:
       type: ClusterIP
