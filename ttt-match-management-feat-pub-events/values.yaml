@@ -23,7 +23,7 @@ app:
     readinessProbePath: api/actuator/health
     image:
       repository: tabletennistournament/match-management-server
-      tag: feat-pub-events-0474129
+      tag: feat-pub-events-76d6216
       pullPolicy: Always
     service:
       type: ClusterIP
