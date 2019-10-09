@@ -4,7 +4,7 @@ app:
     appPort: 8080
     image:
       repository: tabletennistournament/match-management-client
-      tag: feat-ignore-sonar-4e31309
+      tag: feat-ignore-sonar-2791ac2
       pullPolicy: Always
     service:
       type: ClusterIP
