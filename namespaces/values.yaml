@@ -53,3 +53,10 @@ namespaces:
       syncPolicy:
         automated:
           prune: true
+    ttt-match-management-usecase3:
+      helm:
+        valueFiles:
+        - values.yaml
+      syncPolicy:
+        automated:
+          prune: true
