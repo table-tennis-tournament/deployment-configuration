@@ -21,7 +21,14 @@ namespaces:
     ttt-match-management-feat-hash-routing:
       helm:
         valueFiles:
-          - values.yaml
+        - values.yaml
+      syncPolicy:
+        automated:
+          prune: true
+    ttt-match-management-feat-player-score:
+      helm:
+        valueFiles:
+        - values.yaml
       syncPolicy:
         automated:
           prune: true
