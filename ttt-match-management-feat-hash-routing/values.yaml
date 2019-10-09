@@ -4,7 +4,7 @@ app:
     appPort: 8080
     image:
       repository: tabletennistournament/match-management-client
-      tag: feat-hash-routing-74ca87a
+      tag: feat-hash-routing-1898ff7
       pullPolicy: Always
     service:
       type: ClusterIP
