@@ -23,7 +23,7 @@ app:
     readinessProbePath: api/actuator/health
     image:
       repository: tabletennistournament/match-management-server
-      tag: feat-init-mock-2e2d20d
+      tag: feat-init-mock-527c940
       pullPolicy: Always
     service:
       type: ClusterIP
