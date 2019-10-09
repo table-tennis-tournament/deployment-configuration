@@ -67,3 +67,10 @@ namespaces:
       syncPolicy:
         automated:
           prune: true
+    ttt-match-management-feat-score-names:
+      helm:
+        valueFiles:
+        - values.yaml
+      syncPolicy:
+        automated:
+          prune: true
