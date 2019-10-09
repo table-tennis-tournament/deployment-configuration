@@ -102,3 +102,10 @@ namespaces:
       syncPolicy:
         automated:
           prune: true
+    ttt-match-management-fix-websocket-table:
+      helm:
+        valueFiles:
+        - values.yaml
+      syncPolicy:
+        automated:
+          prune: true
