@@ -9,6 +9,7 @@ namespaces:
   - luechtdiode
   - lennartx
   - arburk
+  - yannickholzenkamp
   applications:
     ttt-match-management:
       helm:
