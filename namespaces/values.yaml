@@ -129,3 +129,10 @@ namespaces:
       syncPolicy:
         automated:
           prune: true
+    ttt-match-management-feature-mappers:
+      helm:
+        valueFiles:
+        - values.yaml
+      syncPolicy:
+        automated:
+          prune: true
