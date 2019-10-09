@@ -31,3 +31,10 @@ namespaces:
       syncPolicy:
         automated:
           prune: true
+    ttt-match-management-feat-ide:
+      helm:
+        valueFiles:
+        - values.yaml
+      syncPolicy:
+        automated:
+          prune: true
