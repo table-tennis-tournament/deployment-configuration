@@ -23,7 +23,7 @@ app:
     readinessProbePath: api/actuator/health
     image:
       repository: tabletennistournament/match-management-server
-      tag: specifix-gitops-c3da6b9
+      tag: specifix-gitops-58281e4
       pullPolicy: Always
     service:
       type: ClusterIP
