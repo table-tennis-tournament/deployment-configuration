@@ -74,3 +74,10 @@ namespaces:
       syncPolicy:
         automated:
           prune: true
+    ttt-match-management-feat-eventbus:
+      helm:
+        valueFiles:
+        - values.yaml
+      syncPolicy:
+        automated:
+          prune: true
