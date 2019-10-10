@@ -4,7 +4,7 @@ app:
     appPort: 8080
     image:
       repository: tabletennistournament/match-management-client
-      tag: feat-number-input-9567c84
+      tag: feat-number-input-2e25c78
       pullPolicy: Always
     service:
       type: ClusterIP
