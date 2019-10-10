@@ -102,3 +102,10 @@ namespaces:
       syncPolicy:
         automated:
           prune: true
+    ttt-match-management-client-build-speed:
+      helm:
+        valueFiles:
+        - values.yaml
+      syncPolicy:
+        automated:
+          prune: true
