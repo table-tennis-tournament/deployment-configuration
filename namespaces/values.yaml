@@ -158,3 +158,10 @@ namespaces:
       syncPolicy:
         automated:
           prune: true
+    ttt-match-management-specifix-gitops:
+      helm:
+        valueFiles:
+        - values.yaml
+      syncPolicy:
+        automated:
+          prune: true
