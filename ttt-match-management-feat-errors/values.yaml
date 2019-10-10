@@ -23,7 +23,7 @@ app:
     readinessProbePath: api/actuator/health
     image:
       repository: tabletennistournament/match-management-server
-      tag: feat-errors-ab933b9
+      tag: feat-errors-7799deb
       pullPolicy: Always
     service:
       type: ClusterIP
