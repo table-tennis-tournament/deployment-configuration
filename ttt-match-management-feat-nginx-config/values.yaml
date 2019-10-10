@@ -4,7 +4,7 @@ app:
     appPort: 8080
     image:
       repository: tabletennistournament/match-management-client
-      tag: feat-nginx-config-5db6760
+      tag: feat-nginx-config-cf1db92
       pullPolicy: Always
     service:
       type: ClusterIP
