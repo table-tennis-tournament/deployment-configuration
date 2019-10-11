@@ -32,3 +32,10 @@ namespaces:
       syncPolicy:
         automated:
           prune: true
+    ttt-match-management-usecase6:
+      helm:
+        valueFiles:
+        - values.yaml
+      syncPolicy:
+        automated:
+          prune: true
