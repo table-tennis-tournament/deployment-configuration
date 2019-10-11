@@ -39,3 +39,10 @@ namespaces:
       syncPolicy:
         automated:
           prune: true
+    ttt-match-management-feat-ui-game-res:
+      helm:
+        valueFiles:
+        - values.yaml
+      syncPolicy:
+        automated:
+          prune: true
