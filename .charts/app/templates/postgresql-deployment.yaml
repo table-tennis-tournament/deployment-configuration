@@ -2,9 +2,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ template "app.fullname" . }}-postgresql
+  name: postgresql
   labels:
-    app: {{ template "app.name" . }}-postgresql
+    app: postgresql
     chart: {{ template "app.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
