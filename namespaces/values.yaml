@@ -10,6 +10,7 @@ namespaces:
   - lennartx
   - arburk
   - yannickholzenkamp
+  - vangual
   applications:
     ttt-match-management:
       helm:
