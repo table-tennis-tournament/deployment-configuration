@@ -51,18 +51,6 @@ spec:
           ports:
             - containerPort: {{ .Values.backend.appPort }}
               protocol: TCP
-          livenessProbe:
-            initialDelaySeconds: 30
-            periodSeconds: 3
-            httpGet:
-              path: {{ .Values.backend.livenessProbePath }}
-              port: {{ .Values.backend.appPort }}
-          readinessProbe:
-            initialDelaySeconds: 20
-            periodSeconds: 3
-            httpGet:
-              path: {{ .Values.backend.readinessProbePath }}
-              port: {{ .Values.backend.appPort }}
           resources:
 {{ toYaml .Values.backend.resources | indent 12 }}
     {{- with .Values.backend.nodeSelector }}

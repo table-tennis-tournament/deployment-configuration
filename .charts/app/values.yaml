@@ -1,7 +1,7 @@
 route:
   enabled: true
   host: ""
-  defaultDomain: apps.wheel.sh
+  defaultDomain: table-manager.apps.baloise.dev
 
 postgresql:
   enabled: true
@@ -65,8 +65,6 @@ backend:
     port: 80
   route:
     path: /api
-  livenessProbePath: api/hello
-  readinessProbePath: api/hello
   resources: {}
     # limits:
     #  cpu: 100m
