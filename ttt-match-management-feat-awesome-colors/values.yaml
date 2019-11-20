@@ -4,7 +4,7 @@ app:
     appPort: 8080
     image:
       repository: tabletennistournament/match-management-client
-      tag: feat-awesome-colors-997718b
+      tag: feat-awesome-colors-512ecb9
       pullPolicy: Always
     service:
       type: ClusterIP
