@@ -23,7 +23,7 @@ app:
     readinessProbePath: api/actuator/health
     image:
       repository: tabletennistournament/match-management-server
-      tag: fix-travis-0060761
+      tag: fix-travis-a3ea74f
       pullPolicy: Always
     service:
       type: ClusterIP
