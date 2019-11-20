@@ -1,7 +1,7 @@
 route:
   enabled: true
   host: ""
-  defaultDomain: table-manager.apps.baloise.dev
+  defaultDomain: apps.baloise.dev
 
 postgresql:
   enabled: true
