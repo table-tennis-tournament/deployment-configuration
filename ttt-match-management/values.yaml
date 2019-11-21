@@ -1,6 +1,6 @@
 app:
   frontend:
-    replicaCount: 1
+    replicaCount: 7
     appPort: 8080
     image:
       repository: tabletennistournament/match-management-client
@@ -17,7 +17,7 @@ app:
     tolerations: []
     affinity: {}
   backend:
-    replicaCount: 1
+    replicaCount: 16
     appPort: 8080
     livenessProbePath: api/actuator/health
     readinessProbePath: api/actuator/health
