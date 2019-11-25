@@ -19,35 +19,7 @@ namespaces:
       syncPolicy:
         automated:
           prune: true
-    ttt-match-management-usecase6:
-      helm:
-        valueFiles:
-        - values.yaml
-      syncPolicy:
-        automated:
-          prune: true
-    ttt-match-management-feat-ui-game-res:
-      helm:
-        valueFiles:
-        - values.yaml
-      syncPolicy:
-        automated:
-          prune: true
-    ttt-match-management-fix-travis:
-      helm:
-        valueFiles:
-        - values.yaml
-      syncPolicy:
-        automated:
-          prune: true
     ttt-match-management-feat-awesome-colors:
-      helm:
-        valueFiles:
-        - values.yaml
-      syncPolicy:
-        automated:
-          prune: true
-    ttt-match-management-multiple-players:
       helm:
         valueFiles:
         - values.yaml
