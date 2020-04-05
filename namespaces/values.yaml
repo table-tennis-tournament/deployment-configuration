@@ -26,3 +26,10 @@ namespaces:
       syncPolicy:
         automated:
           prune: true
+    ttt-match-management-dependabot-npm-and-yarn-acorn-6-4-1:
+      helm:
+        valueFiles:
+        - values.yaml
+      syncPolicy:
+        automated:
+          prune: true
