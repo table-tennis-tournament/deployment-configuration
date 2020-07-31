@@ -61,3 +61,10 @@ namespaces:
       syncPolicy:
         automated:
           prune: true
+    ttt-match-management-dependabot-npm-and-yarn-elliptic-6-5-3:
+      helm:
+        valueFiles:
+        - values.yaml
+      syncPolicy:
+        automated:
+          prune: true
