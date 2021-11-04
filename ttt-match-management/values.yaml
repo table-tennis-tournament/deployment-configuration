@@ -1,37 +1,66 @@
-app:
-  frontend:
-    replicaCount: 1
-    appPort: 8080
-    image:
-      repository: tabletennistournament/match-management-client
-      tag: master-80b630c
-      pullPolicy: Always
-    service:
-      type: ClusterIP
-      port: 80
-    route:
-      enabled: true
-      path: /
-    resources: {}
-    nodeSelector: {}
-    tolerations: []
-    affinity: {}
-  backend:
-    replicaCount: 1
-    appPort: 8080
-    livenessProbePath: api/actuator/health
-    readinessProbePath: api/actuator/health
-    image:
-      repository: tabletennistournament/match-management-server
-      tag: master-b03d3e7
-      pullPolicy: Always
-    service:
-      type: ClusterIP
-      port: 80
-    route:
-      enabled: true
-      path: /api
-    resources: {}
-    nodeSelector: {}
-    tolerations: []
-    affinity: {}
+mysql-db:
+  replicaCount: 1
+  image:
+    repository: holzleube/mysql-docker-image
+    tag: 4.0
+  service:
+    type: ClusterIP
+  env:
+    - name: MYSQL_SERVER
+      value: mysecretpassword
+    - name: MYSQL_DB
+      value: tournamentManager
+    - name: MYSQL_USER
+      value: root
+    - name: MYSQL_PORT
+      value: 3306
+  resources:
+    requests:
+      memory: 1Mi
+    limits:
+      memory: 100Mi
+management-backend:
+  replicaCount: 1
+  image:
+    repository: holzleube/turniermanager
+    tag: 3.2
+  network:
+    http:
+      containerPort: 9000
+      servicePort: 9000
+      ingress:
+        host: ttt-management.apps.okd.baloise.dev
+  service:
+    type: ClusterIP
+  env:
+    - name: MYSQL_SERVER
+      value: mysecretpassword
+    - name: MYSQL_DB
+      value: tournamentManager
+    - name: MYSQL_USER
+      value: root
+    - name: MYSQL_PORT
+      value: 3306
+  resources:
+    requests:
+      memory: 1Mi
+    limits:
+      memory: 100Mi
+
+admin-view:
+  replicaCount: 1
+  image:
+    repository: holzleube/tt-admin-view
+    tag: main
+  network:
+    http:
+      servicePort: 80
+      ingress:
+        host: ttt-management.apps.baloise.dev
+  service:
+    type: ClusterIP
+  resources:
+    requests:
+      memory: 1Gi
+    limits:
+      memory: 1Gi
