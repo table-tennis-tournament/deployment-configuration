@@ -2,7 +2,7 @@ mysql-db:
   replicaCount: 1
   image:
     repository: holzleube/mysql-docker-image
-    tag: 4.0
+    tag: "4.0"
   service:
     type: ClusterIP
   env:
