@@ -6,14 +6,12 @@ mysql-db:
   service:
     type: ClusterIP
   env:
-    - name: MYSQL_SERVER
+    - name: MYSQL_ROOT_PASSWORD
       value: mysecretpassword
-    - name: MYSQL_DB
-      value: tournamentManager
-    - name: MYSQL_USER
-      value: root
-    - name: MYSQL_PORT
-      value: 3306
+  network:
+    http:
+      containerPort: 3306
+      servicePort: 3306
   resources:
     requests:
       memory: 1Mi
@@ -35,13 +33,15 @@ management-backend:
     type: ClusterIP
   env:
     - name: MYSQL_SERVER
-      value: mysecretpassword
+      value: mysql-db
     - name: MYSQL_DB
       value: tournamentManager
     - name: MYSQL_USER
       value: root
     - name: MYSQL_PORT
       value: 3306
+    - name: MYSQL_PW
+      value: mysecretpassword
   resources:
     requests:
       memory: 1Mi

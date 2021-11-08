@@ -6,13 +6,13 @@ The deployments of Table Tennis Tournament are deployed in OpenShift. To interac
 
 All members of the [Table Tennis Tournament](https://github.com/orgs/table-tennis-tournament/people) organisation can login via GitHub at the following applications:
 
-* [Wheel OpenShift Cluster](https://console.wheel.sh:8443)
-* [Wheel Argo CD](https://argocd.wheel.sh)
+* [OpenShift Cluster](https://console.baloise.dev)
+* [Argo CD](https://argocd.baloise.dev)
 
 To get access to the deployed applications, add the GitHub username in the `namespaces/values.yaml` file under `namespaces.users`. 
 
 # Deploy Application
-To deploy an application in the OpenShift cluster, a `Helm Chart` must be created, and this must be referenced in the `namespaces/values.yaml` file.
+To deploy an application in the OpenShift cluster, a `Helm Chart` must be created. You can use the [generic chart]()
 
 ## Create Helm Chart
 To create a `Helm Chart`, simply copy the `app-template` directory into a new one, e.g. `rocket-app-stage`.  Then open the `rocket-app-stage/Chart.yaml` file, and change the `name: app-template` to the newly created directory name to `name: rocket-app-stage`. 
