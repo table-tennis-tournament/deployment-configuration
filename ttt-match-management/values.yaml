@@ -30,6 +30,7 @@ management-backend:
       servicePort: 9000
       ingress:
         host: ttt-management.apps.okd.baloise.dev
+        path: /api
   service:
     type: ClusterIP
   env:
@@ -61,6 +62,6 @@ admin-view:
     type: ClusterIP
   resources:
     requests:
-      memory: 1Gi
+      memory: 1Mi
     limits:
-      memory: 1Gi
+      memory: 100Mi
