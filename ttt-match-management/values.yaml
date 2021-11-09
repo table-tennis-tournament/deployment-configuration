@@ -2,6 +2,9 @@ mysql-db:
   image:
     repository: holzleube/mysql-docker-image
     tag: "4.0"
+  auth:
+    username: ttv
+    passwort: test1234
   primary:
     containerSecurityContext:
       runAsUser: 1001560001
@@ -22,12 +25,9 @@ management-backend:
     - name: MYSQL_JDBC
       value: "jdbc:mysql://ttt-match-management-mysql-db:3306/tournamentManager"
     - name: MYSQL_PW
-      valueFrom:
-        secretKeyRef:
-          name: ttt-match-management-mysql-db
-          key: mysql-root-password
+      value: test1234
     - name: MYSQL_USER
-      value: root
+      value: ttv
   resources:
     requests:
       memory: 1Gi
