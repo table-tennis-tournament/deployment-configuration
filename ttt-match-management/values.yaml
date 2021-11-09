@@ -18,8 +18,8 @@ management-backend:
       value: root
     - name: MYSQL_PORT
       value: 3306
-    - name: MYSQL_PW
-      value: mysecretpassword
+#    - name: MYSQL_PW
+#      value: mysecretpassword
   resources:
     requests:
       memory: 1Mi
