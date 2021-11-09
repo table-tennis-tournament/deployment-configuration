@@ -18,9 +18,9 @@ management-backend:
       value: root
   resources:
     requests:
-      memory: 1Mi
+      memory: 1Gi
     limits:
-      memory: 100Mi
+      memory: 2Gi
 admin-view:
   replicaCount: 1
   image:
