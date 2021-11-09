@@ -10,6 +10,12 @@ mysql-db:
       runAsUser: 1001560001
     podSecurityContext:
       enabled: false
+    livenessProbe:
+      enabled: false
+    readinessProbe:
+      enabled: false
+    startupProbe:
+      enabled: false
 management-backend:
   replicaCount: 1
   image:
