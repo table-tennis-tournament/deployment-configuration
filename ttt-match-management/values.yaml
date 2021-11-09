@@ -32,9 +32,9 @@ management-backend:
     - name: MYSQL_JDBC
       value: "jdbc:mysql://ttt-match-management-mysql-db:3306/tournamentManager"
     - name: MYSQL_PW
-      value: test1234
+      value: test12345
     - name: MYSQL_USER
-      value: ttv
+      value: root
   resources:
     requests:
       memory: 1Gi
