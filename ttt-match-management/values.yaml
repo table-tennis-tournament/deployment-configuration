@@ -9,17 +9,17 @@ management-backend:
       ingress:
         host: ttt-management.apps.okd.baloise.dev
         path: /api
-  env:
-    - name: MYSQL_SERVER
-      value: mysql-db
-    - name: MYSQL_DB
-      value: tournamentManager
-    - name: MYSQL_USER
-      value: root
-    - name: MYSQL_PORT
-      value: 3306
-    - name: MYSQL_PW
-      value: mysecretpassword
+#  env:
+#    - name: MYSQL_SERVER
+#      value: mysql-db
+#    - name: MYSQL_DB
+#      value: tournamentManager
+#    - name: MYSQL_USER
+#      value: root
+#    - name: MYSQL_PORT
+#      value: 3306
+#    - name: MYSQL_PW
+#      value: mysecretpassword
   resources:
     requests:
       memory: 1Mi
