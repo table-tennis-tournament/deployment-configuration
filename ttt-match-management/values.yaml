@@ -1,14 +1,12 @@
 mysql-db:
   image:
     repository: holzleube/mysql-docker-image
-    tag: "4.1"
+    tag: "4.0"
   auth:
     username: ttv
     passwort: test1234
     rootPassword: test12345
   primary:
-    containerSecurityContext:
-      runAsUser: 1001560000
     podSecurityContext:
       enabled: false
     livenessProbe:
