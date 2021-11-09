@@ -12,8 +12,8 @@ management-backend:
   env:
     - name: MYSQL_JDBC
       value: "jdbc:mysql://mysql-db:3306/tournamentManager"
-    - name: MYSQL_DB
-      value: tournamentManager
+    - name: MYSQL_PW
+      value: mysecret
     - name: MYSQL_USER
       value: root
   resources:
