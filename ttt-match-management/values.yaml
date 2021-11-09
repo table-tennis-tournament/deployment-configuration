@@ -8,7 +8,7 @@ mysql-db:
     rootPassword: test12345
   primary:
     containerSecurityContext:
-      runAsUser: 1001560001
+      runAsUser: 1001560000
     podSecurityContext:
       enabled: false
     livenessProbe:
