@@ -22,7 +22,10 @@ management-backend:
     - name: MYSQL_JDBC
       value: "jdbc:mysql://ttt-match-management-mysql-db:3306/tournamentManager"
     - name: MYSQL_PW
-      value: mysecret
+      valueFrom:
+        secretKeyRef:
+          name: ttt-match-management-mysql-db
+          key: mysql-root-password
     - name: MYSQL_USER
       value: root
   resources:
