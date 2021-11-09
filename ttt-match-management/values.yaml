@@ -16,6 +16,8 @@ mysql-db:
       enabled: false
     startupProbe:
       enabled: false
+  volumePermissions:
+    enabled: true
 management-backend:
   replicaCount: 1
   image:
