@@ -2,6 +2,9 @@ mysql-db:
   image:
     repository: holzleube/mysql-docker-image
     tag: "4.0"
+  primary:
+    containerSecurityContext:
+      runAsUser: 1001560001
 management-backend:
   replicaCount: 1
   image:
