@@ -5,6 +5,8 @@ mysql-db:
   primary:
     containerSecurityContext:
       runAsUser: 1001560001
+    podSecurityContext:
+      enabled: false
 management-backend:
   replicaCount: 1
   image:
