@@ -17,7 +17,7 @@ management-backend:
     - name: MYSQL_USER
       value: root
     - name: MYSQL_PORT
-      value: 3306
+      value: "3306"
 #    - name: MYSQL_PW
 #      value: mysecretpassword
   resources:
