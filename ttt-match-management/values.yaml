@@ -5,6 +5,7 @@ mysql-db:
   auth:
     username: ttv
     passwort: test1234
+    rootPassword: test12345
   primary:
     containerSecurityContext:
       runAsUser: 1001560001
