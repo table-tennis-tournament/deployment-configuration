@@ -20,7 +20,7 @@ management-backend:
         path: /api
   env:
     - name: MYSQL_JDBC
-      value: "jdbc:mysql://mysql-db:3306/tournamentManager"
+      value: "jdbc:mysql://ttt-match-management-mysql-db:3306/tournamentManager"
     - name: MYSQL_PW
       value: mysecret
     - name: MYSQL_USER
