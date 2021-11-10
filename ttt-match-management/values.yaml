@@ -21,7 +21,7 @@ management-backend:
   replicaCount: 1
   image:
     repository: holzleube/turniermanager
-    tag: 3.4
+    tag: 3.5
   network:
     http:
       servicePort: 9000
