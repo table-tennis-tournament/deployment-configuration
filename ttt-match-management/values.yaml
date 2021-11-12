@@ -50,7 +50,6 @@ admin-view:
     tag: main
   network:
     http:
-      servicePort: 80
       ingress:
         host: ttt-management.apps.baloise.dev
   resources:
