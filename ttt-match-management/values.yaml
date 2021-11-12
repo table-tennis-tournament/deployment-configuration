@@ -24,7 +24,7 @@ management-backend:
     tag: 3.7
   network:
     http:
-      servicePort: 9000
+      servicePort: 80
       containerPort: 9000
       ingress:
         host: ttt-management.apps.okd.baloise.dev
