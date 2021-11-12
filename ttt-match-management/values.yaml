@@ -48,6 +48,7 @@ admin-view:
   image:
     repository: holzleube/tt-admin-view
     tag: main
+    pullPolicy: Always
   network:
     http:
       ingress:
