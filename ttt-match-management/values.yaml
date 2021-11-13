@@ -47,7 +47,7 @@ admin-view:
   replicaCount: 1
   image:
     repository: holzleube/tt-admin-view
-    tag: bc6aa9b2f5c492af042357b28d017757bdd2158c
+    tag: 4f8bac90ff44802afeec7d107b0e6d5537ba74b2
     pullPolicy: Always
   network:
     http:
