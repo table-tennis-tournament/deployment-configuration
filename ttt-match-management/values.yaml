@@ -24,7 +24,6 @@ management-backend:
     tag: 3.7
   network:
     http:
-      servicePort: 80
       containerPort: 9000
       ingress:
         host: ttt-management.apps.baloise.dev
