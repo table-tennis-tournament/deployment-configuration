@@ -27,7 +27,8 @@ management-backend:
       servicePort: 80
       containerPort: 9000
       ingress:
-        host: ttt-management.apps.okd.baloise.dev/api
+        host: ttt-management.apps.okd.baloise.dev
+        path: /api
   env:
     - name: MYSQL_JDBC
       value: "jdbc:mysql://ttt-match-management-mysql-db:3306/tournamentManager"
