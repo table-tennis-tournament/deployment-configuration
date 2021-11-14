@@ -25,6 +25,7 @@ management-backend:
   network:
     http:
       servicePort: 9000
+      containerPort: 9000
       ingress:
         host: ttt-management.apps.baloise.dev
         path: /api
