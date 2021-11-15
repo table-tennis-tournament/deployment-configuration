@@ -1,7 +1,7 @@
 mysql-db:
   image:
     repository: holzleube/mysql-docker-image
-    tag: "4.2"
+    tag: "3.0"
   auth:
     username: ttv
     passwort: test1234
@@ -21,7 +21,7 @@ management-backend:
   replicaCount: 1
   image:
     repository: holzleube/turniermanager
-    tag: 3.7
+    tag: "4.0"
   network:
     http:
       servicePort: 9000
