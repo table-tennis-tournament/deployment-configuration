@@ -1,7 +1,7 @@
 mysql-db:
   image:
     repository: holzleube/mysql-docker-image
-    tag: "3.0"
+    tag: "4.3"
   auth:
     username: ttv
     passwort: test1234
