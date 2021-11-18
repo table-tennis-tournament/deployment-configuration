@@ -32,6 +32,12 @@ registration:
       value: test12345
     - name: MYSQL_USER
       value: root
+    - name: EMAIL_SERVER
+      value: root
+    - name: EMAIL_USER
+      value: root
+    - name: EMAIL_PW
+      value: root
   resources:
     requests:
       memory: 1Gi
@@ -39,18 +45,3 @@ registration:
     limits:
       memory: 2Gi
       cpu: 4
-admin-view:
-  replicaCount: 1
-  image:
-    repository: holzleube/tt-admin-view
-    tag: 3e9f37616a3b754e1068c316347b3169a233d245
-    pullPolicy: Always
-  network:
-    http:
-      ingress:
-        host: ttt-management.apps.baloise.dev
-  resources:
-    requests:
-      memory: 1Mi
-    limits:
-      memory: 100Mi
