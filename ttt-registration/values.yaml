@@ -1,0 +1,56 @@
+mysql-db:
+  image:
+    repository: bitnami/mysql
+    tag: "5.7.36"
+  auth:
+    username: ttv
+    passwort: test1234
+  primary:
+    podSecurityContext:
+      enabled: false
+    livenessProbe:
+      enabled: false
+    readinessProbe:
+      enabled: false
+    startupProbe:
+      enabled: false
+  volumePermissions:
+    enabled: true
+registration:
+  replicaCount: 1
+  image:
+    repository: holzleube/tournamentregistration
+    tag: "master-8eccb38"
+  network:
+    http:
+      ingress:
+        host: ttt-registration.apps.baloise.dev
+  env:
+    - name: MYSQL_JDBC
+      value: "jdbc:mysql://ttt-registration-mysql-db:3306/my_database"
+    - name: MYSQL_PW
+      value: test12345
+    - name: MYSQL_USER
+      value: root
+  resources:
+    requests:
+      memory: 1Gi
+      cpu: 2
+    limits:
+      memory: 2Gi
+      cpu: 4
+admin-view:
+  replicaCount: 1
+  image:
+    repository: holzleube/tt-admin-view
+    tag: 3e9f37616a3b754e1068c316347b3169a233d245
+    pullPolicy: Always
+  network:
+    http:
+      ingress:
+        host: ttt-management.apps.baloise.dev
+  resources:
+    requests:
+      memory: 1Mi
+    limits:
+      memory: 100Mi
