@@ -5,6 +5,7 @@ mysql-db:
   auth:
     username: ttv
     passwort: test1234
+    rootPassword: test12345
   primary:
     podSecurityContext:
       enabled: false
@@ -33,11 +34,20 @@ registration:
     - name: MYSQL_USER
       value: root
     - name: EMAIL_SERVER
-      value: root
+      valueFrom:
+        secretKeyRef:
+          name: email-secret
+          key: emailserver
     - name: EMAIL_USER
-      value: root
+      valueFrom:
+        secretKeyRef:
+          name: email-secret
+          key: emailuser
     - name: EMAIL_PW
-      value: root
+      valueFrom:
+        secretKeyRef:
+          name: email-secret
+          key: emailpassword
   resources:
     requests:
       memory: 1Gi

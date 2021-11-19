@@ -12,46 +12,21 @@ All members of the [Table Tennis Tournament](https://github.com/orgs/table-tenni
 To get access to the deployed applications, add the GitHub username in the `namespaces/values.yaml` file under `namespaces.users`. 
 
 # Deploy Application
-To deploy an application in the OpenShift cluster, a `Helm Chart` must be created. You can use the [generic chart]()
+To deploy an application in the OpenShift cluster, a `Helm Chart` must be created. You can use the [generic chart](https://github.com/baloise-incubator/generic-chart)
 
-## Create Helm Chart
-To create a `Helm Chart`, simply copy the `app-template` directory into a new one, e.g. `rocket-app-stage`.  Then open the `rocket-app-stage/Chart.yaml` file, and change the `name: app-template` to the newly created directory name to `name: rocket-app-stage`. 
-
-Then change the referenced `image.repository` and `image.tag` under `app.frontend` and `app.backend` in the `rocket-app-stage/values.yaml` file.
-
-Congratulation, you created and configured your `Helm Chart`.
-
-## Reference Helm Chart
-To deploy your newly created `Helm Chart` in OpenShift you need to reference your `Chart` in the `namespaces/values.yaml` file. To add a new entry at `namespaces.applications` list. After you pushed your commit, it takes around 30 secounds until the deployment in OpenShift starts. You should see the Deployment in the [ArgoCD Web Console](https://argocd.wheel.sh). Your deployed app will then be accessable under https://rocket-app-stage.apps.wheel.sh (replace rocket-app-stage with actual directory/Chart name) if not declared otherwise. 
-
-### Reference Helm Chart
+## kubeseal
+To seal the secrets with kubeseal, you can use the following scripts:
+### ttt-registration
+```
+kubectl create secret generic email-secret --dry-run --from-literal=emailserver='?' --from-literal=emailuser='?' --from-literal=emailpassword='?' -o yaml >mysecret.yaml
+```
+```
+kubeseal --namespace=ttt-registration --cert https://raw.githubusercontent.com/baloise-incubator/okd4-cluster-infra-apps/master/sealed-secrets/kubeseal.crt -oyaml <mysecret.yaml >email-secret.yaml 
+``` 
 
 ```
-namespaces:
-[...]
-  applications:
-[...]
-    - name: rocket-app-stage # Must be the same as the directory name.   
-      helm: 
-        valueFiles:
-          - "values.yaml"
-      # This enables automatic synchronization from Git.           
-      syncPolicy:
-        automated:
-          prune: true
+kubectl create secret generic email-secret --dry-run --from-literal=emailserver='?' --from-literal=emailuser='?' --from-literal=emailpassword='?' -o yaml >mysecret.yaml
 ```
-
-### References YAML
-If you want to deploy simply from YAML files, you can just declare the `name` attribute which must match the directory name:
-
 ```
-namespaces:
-[...]
-  applications:
-[...]
-    - name: rocket-app-stage # Must be the same as the directory name.   
-      # This enables automatic synchronization from Git.           
-      syncPolicy:
-        automated:
-          prune: true
-```
+kubeseal --namespace=ttt-registration --cert https://raw.githubusercontent.com/baloise-incubator/okd4-cluster-infra-apps/master/sealed-secrets/kubeseal.crt -oyaml <mysecret.yaml >email-secret.yaml 
+``` 
