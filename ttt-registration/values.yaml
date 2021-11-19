@@ -21,7 +21,7 @@ registration:
   replicaCount: 1
   image:
     repository: holzleube/tournamentregistration
-    tag: "master-8eccb38"
+    tag: "ttv2022"
   network:
     http:
       ingress:
