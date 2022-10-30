@@ -21,14 +21,14 @@ registration:
   replicaCount: 1
   image:
     repository: holzleube/tournamentregistration
-    tag: "ttv22-1.0"
+    tag: "ttv23-1.0"
   network:
     http:
       ingress:
         host: ttt-registration.apps.baloise.dev
   env:
     - name: MYSQL_JDBC
-      value: "jdbc:mysql://ttt-registration-mysql-db:3306/ttvettlingen22"
+      value: "jdbc:mysql://ttt-registration-mysql-db:3306/ttvettlingen23"
     - name: MYSQL_PW
       value: test12345
     - name: MYSQL_USER
