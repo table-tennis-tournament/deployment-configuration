@@ -33,21 +33,9 @@ registration:
       value: test12345
     - name: MYSQL_USER
       value: root
-    - name: EMAIL_SERVER
-      valueFrom:
-        secretKeyRef:
-          name: email-secret
-          key: emailserver
-    - name: EMAIL_USER
-      valueFrom:
-        secretKeyRef:
-          name: email-secret
-          key: emailuser
-    - name: EMAIL_PW
-      valueFrom:
-        secretKeyRef:
-          name: email-secret
-          key: emailpassword
+  envFrom:
+    - secretRef:
+      name: email-sealed-secrets
   resources:
     requests:
       memory: 1Gi
