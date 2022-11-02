@@ -37,7 +37,7 @@ registration:
       value: root
   envFrom:
     - secretRef:
-      name: email-sealed-secrets
+        name: email-sealed-secrets
   resources:
     requests:
       memory: 1Gi
