@@ -2,10 +2,10 @@ apiVersion: v2
 version: 1.0.0
 name: ttt-registration
 dependencies:
-#  - name: generic-chart
-#    version: 2.1.0
-#    repository: https://registry.baloise.dev/chartrepo/library
-#    alias: registration
+  - name: generic-chart
+    version: 2.1.0
+    repository: https://registry.baloise.dev/chartrepo/library
+    alias: registration
   - name: mysql
     version: '9.4.1'
     repository: https://charts.bitnami.com/bitnami
