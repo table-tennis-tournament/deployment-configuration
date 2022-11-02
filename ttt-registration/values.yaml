@@ -1,7 +1,7 @@
 mysql-db:
   image:
     repository: bitnami/mysql
-    tag: "8.0.31"
+    tag: "5.7.40"
   auth:
     username: ttv
     passwort: test1234
@@ -16,7 +16,7 @@ mysql-db:
     startupProbe:
       enabled: false
     containerSecurityContext:
-      runAsUser: 1000930000
+      runAsUser: 1000930001
   volumePermissions:
     enabled: true
 registration:
