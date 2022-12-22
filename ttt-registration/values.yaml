@@ -1,24 +1,24 @@
-mysql-db:
-  image:
-    repository: bitnami/mysql
-    tag: "5.7.40"
-  auth:
-    username: ttv
-    passwort: test1234
-    rootPassword: test12345
-  primary:
-    podSecurityContext:
-      enabled: false
-    livenessProbe:
-      enabled: false
-    readinessProbe:
-      enabled: false
-    startupProbe:
-      enabled: false
-    containerSecurityContext:
-      runAsUser: 1000930001
-  volumePermissions:
-    enabled: true
+#mysql-db:
+#  image:
+#    repository: bitnami/mysql
+#    tag: "5.7.40"
+#  auth:
+#    username: ttv
+#    passwort: test1234
+#    rootPassword: test12345
+#  primary:
+#    podSecurityContext:
+#      enabled: false
+#    livenessProbe:
+#      enabled: false
+#    readinessProbe:
+#      enabled: false
+#    startupProbe:
+#      enabled: false
+#    containerSecurityContext:
+#      runAsUser: 1000930001
+#  volumePermissions:
+#    enabled: true
 registration:
   replicaCount: 1
   image:
