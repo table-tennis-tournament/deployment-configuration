@@ -6,7 +6,7 @@ dependencies:
     version: 2.1.0
     repository: https://registry.baloise.dev/chartrepo/library
     alias: registration
-#  - name: mysql
-#    version: '9.4.1'
-#    repository: https://charts.bitnami.com/bitnami
-#    alias: mysql-db
+  - name: mysql
+    version: '9.4.1'
+    repository: https://charts.bitnami.com/bitnami
+    alias: mysql

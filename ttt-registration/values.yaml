@@ -1,24 +1,24 @@
-#mysql-db:
-#  image:
-#    repository: bitnami/mysql
-#    tag: "5.7.40"
-#  auth:
-#    username: ttv
-#    passwort: test1234
-#    rootPassword: test12345
-#  primary:
-#    podSecurityContext:
-#      enabled: false
-#    livenessProbe:
-#      enabled: false
-#    readinessProbe:
-#      enabled: false
-#    startupProbe:
-#      enabled: false
-#    containerSecurityContext:
-#      runAsUser: 1000930001
-#  volumePermissions:
-#    enabled: true
+mysql:
+  image:
+    repository: bitnami/mysql
+    tag: "5.7.40"
+  auth:
+    username: ttv
+    passwort: test1234
+    rootPassword: test12345
+  primary:
+    podSecurityContext:
+      enabled: false
+    livenessProbe:
+      enabled: false
+    readinessProbe:
+      enabled: false
+    startupProbe:
+      enabled: false
+    containerSecurityContext:
+      runAsUser: 1000930001
+  volumePermissions:
+    enabled: true
 registration:
   replicaCount: 1
   image:
@@ -30,7 +30,7 @@ registration:
         host: ttt-registration.apps.baloise.dev
   env:
     - name: MYSQL_JDBC
-      value: "jdbc:mysql://ttt-registration-mysql-db:3306/ttvettlingen23"
+      value: "jdbc:mysql://ttt-registration-mysql:3306/ttvettlingen23"
     - name: MYSQL_PW
       value: test12345
     - name: MYSQL_USER
