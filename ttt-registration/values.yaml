@@ -30,7 +30,7 @@ registration:
         host: ttt-registration.apps.baloise.dev
   env:
     - name: MYSQL_JDBC
-      value: "jdbc:mysql://ttt-registration-mysql:3306/ttv24"
+      value: "jdbc:mysql://ttt-registration-mysql:3306/ttvettlingen24"
     - name: MYSQL_PW
       value: test12345
     - name: MYSQL_USER
