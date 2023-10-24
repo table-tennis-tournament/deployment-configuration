@@ -16,7 +16,7 @@ mysql:
     startupProbe:
       enabled: false
     containerSecurityContext:
-      runAsUser: 1000860000
+      runAsUser: 1000890000
   volumePermissions:
     enabled: true
 registration:
