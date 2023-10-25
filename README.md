@@ -18,7 +18,8 @@ To deploy an application in the OpenShift cluster, a `Helm Chart` must be create
 To seal the secrets with kubeseal, you can use the following scripts:
 ### ttt-registration
 ```
-kubectl create secret generic email-sealed-secrets --dry-run --from-literal=emailserver='?' --from-literal=emailuser='?' --from-literal=emailpassword='?' -o yaml >mysecret.yaml
+kubectl create secret generic email-sealed-secrets --dry-run=client --from-literal=EMAIL_SERVER=myemailserver --from-literal=EMAIL_USER=myuser --from-literal=EMAIL_PW=mysecret -o yaml >mysecret.yaml
+
 ```
 ```
 kubeseal --namespace=ttt-registration --cert https://raw.githubusercontent.com/baloise-incubator/okd4-cluster-infra-apps/master/sealed-secrets/kubeseal.crt -oyaml <mysecret.yaml >email-sealed-secrets.yaml 
