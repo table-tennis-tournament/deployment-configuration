@@ -23,7 +23,7 @@ registration:
   replicaCount: 1
   image:
     repository: holzleube/tournamentregistration
-    tag: "ttv24-1.0"
+    tag: "ttv24-1.1"
   network:
     http:
       ingress:
