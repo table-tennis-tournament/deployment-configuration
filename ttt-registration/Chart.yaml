@@ -10,3 +10,7 @@ dependencies:
     version: '9.4.1'
     repository: https://charts.bitnami.com/bitnami
     alias: mysql
+  - name: mariadb
+    version: '23.0.1'
+    repository: https://charts.bitnami.com/bitnami
+    alias: mariadb
