@@ -6,10 +6,6 @@ dependencies:
     version: 2.3.0
     repository: https://baloise-incubator.github.io/generic-chart/
     alias: registration
-  - name: mysql
-    version: '9.4.1'
-    repository: https://charts.bitnami.com/bitnami
-    alias: mysql
   - name: mariadb
     version: '24.0.2'
     repository: https://charts.bitnami.com/bitnami
