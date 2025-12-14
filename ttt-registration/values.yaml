@@ -35,7 +35,7 @@ registration:
         host: ttt-registration.apps.baloise.dev
   env:
     - name: SPRING_DATASOURCE_URL
-      value: "jdbc:mariadb://ttt-registration-mariadb:3306/ttvettlingen24"
+      value: "jdbc:mariadb://ttt-registration-mariadb:3306/ttvettlingen"
     - name: SPRING_DATASOURCE_USERNAME
       value: root
     - name: SPRING_DATASOURCE_PASSWORD
