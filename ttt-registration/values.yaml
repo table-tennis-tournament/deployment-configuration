@@ -21,8 +21,7 @@ mysql:
     enabled: true
 mariadb:
   image:
-    repository: mariadb
-    tag: "11.8.5-ubi9"
+    tag: "latest"
   auth:
     rootPassword: test1234
 registration:
