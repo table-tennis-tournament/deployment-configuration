@@ -11,6 +11,6 @@ dependencies:
     repository: https://charts.bitnami.com/bitnami
     alias: mysql
   - name: mariadb
-    version: '23.0.1'
+    version: '24.0.2'
     repository: https://charts.bitnami.com/bitnami
     alias: mariadb
