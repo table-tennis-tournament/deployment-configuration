@@ -7,7 +7,7 @@ registration:
   replicaCount: 1
   image:
     repository: holzleube/ttt-registration
-    tag: "0.0.2-SNAPSHOT-33ce517"
+    tag: "0.0.2-SNAPSHOT-74e3df5"
   network:
     http:
       ingress:
@@ -19,6 +19,10 @@ registration:
       value: root
     - name: SPRING_DATASOURCE_PASSWORD
       value: test1234
+    - name: SATURDAY_URL
+      value: "https://www.click-tt.de/cgi-bin/WebObjects/nuLigaKurierTTDE.woa/wa/tournamentExport?tournamentId=vPDN8Ey3BW69JmcBtq5aukaRK7fE4pW2"
+    - name: SUNDAY_URL
+      value: "https://www.click-tt.de/cgi-bin/WebObjects/nuLigaKurierTTDE.woa/wa/tournamentExport?tournamentId=wxbpSFHJMQ9fxCdl%2B2dLH5tClATFLQ71"
   resources:
     requests:
       memory: 1Gi
