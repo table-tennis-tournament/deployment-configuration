@@ -7,7 +7,7 @@ registration:
   replicaCount: 1
   image:
     repository: holzleube/ttt-registration
-    tag: "0.0.2-SNAPSHOT-57cf4e9"
+    tag: "0.0.4-SNAPSHOT-5bd4d26"
   network:
     http:
       ingress:
