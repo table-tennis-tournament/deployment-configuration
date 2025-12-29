@@ -20,9 +20,9 @@ registration:
     - name: SPRING_DATASOURCE_PASSWORD
       value: test1234
     - name: SATURDAY_URL
-      value: "https://www.click-tt.de/cgi-bin/WebObjects/nuLigaKurierTTDE.woa/wa/tournamentExport?tournamentId=vPDN8Ey3BW69JmcBtq5aukaRK7fE4pW2"
+      value: "https://www.click-tt.de/cgi-bin/WebObjects/nuLigaKurierTTDE.woa/wa/tournamentExport?tournamentId=uNszMC5S3lGHJ%2F73sqzMpKyigsFP7vFh"
     - name: SUNDAY_URL
-      value: "https://www.click-tt.de/cgi-bin/WebObjects/nuLigaKurierTTDE.woa/wa/tournamentExport?tournamentId=wxbpSFHJMQ9fxCdl%2B2dLH5tClATFLQ71"
+      value: "https://www.click-tt.de/cgi-bin/WebObjects/nuLigaKurierTTDE.woa/wa/tournamentExport?tournamentId=uNszMC5S3lHxYSywOv0rwO%2FPrGGkLL4M"
   resources:
     requests:
       memory: 1Gi
